@@ -14,11 +14,12 @@
 <body>
 
     <div id="root">
-        <!-- {{emailGen.response}} -->
 
-        <ul v-for="email in arrayEmails">
-            <li>{{email}}</li>
-        </ul>
+        <div v-if="status">
+            <ul v-for="email in arrayEmails">
+                <li>{{email}}</li>
+            </ul>
+        </div>
         
     </div>
 

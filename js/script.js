@@ -15,7 +15,8 @@ var app = new Vue({
 
     data: {
         emailGen: "",
-        arrayEmails: []
+        arrayEmails: [],
+        status: false
     },
 
     methods: {
@@ -23,16 +24,11 @@ var app = new Vue({
     },
 
     mounted() {
+        
         for (let i = 0; i < 10; i++) {
         axios
             .get('https://flynn.boolean.careers/exercises/api/random/mail')
             .then((response) => {
-                // this.emailGen = response.data;
-                // console.log(this.emailGen.response);
-
-                // this.arrayEmails.push(this.emailGen.response);
-                // console.log(this.arrayEmails);
-
                 
                 this.emailGen = response.data;
                 console.log(this.emailGen.response);
@@ -42,7 +38,11 @@ var app = new Vue({
                 
                 
             });
-        }    
+        } 
+
+        this.status = true;
+        console.log("status", this.status);
+
     }
 
 
