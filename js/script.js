@@ -3,7 +3,7 @@
 //sintassi vue V
 //sintassi api V
 //importare api boolean V
-//stampare email ...
+//stampare email V
 
 //https://flynn.boolean.careers/exercises/api/random/mail
 
@@ -31,18 +31,16 @@ var app = new Vue({
             .then((response) => {
                 
                 this.emailGen = response.data;
-                console.log(this.emailGen.response);
 
                 this.arrayEmails.push(this.emailGen.response);
                 console.log(this.arrayEmails);
                 
-                
+                if (i == 9) {
+                    this.status = true;
+                    console.log("status", this.status);
+                }
             });
         } 
-
-        this.status = true;
-        console.log("status", this.status);
-
     }
 
 
