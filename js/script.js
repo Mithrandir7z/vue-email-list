@@ -35,7 +35,7 @@ var app = new Vue({
                 this.arrayEmails.push(this.emailGen.response);
                 console.log(this.arrayEmails);
                 
-                if (i == 9) {
+                if (this.arrayEmails.length == 10) {
                     this.status = true;
                     console.log("status", this.status);
                 }
